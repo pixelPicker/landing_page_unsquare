@@ -86,7 +86,7 @@ function RotationSection() {
         onMouseLeave={() => setAngle(0)}
         className="size-[600px] border border-gray-100/50 rounded-full relative"
       >
-        <div className="absolute w-full h-full rounded-full top-1/2 left-1/2 -translate-1/2 bg-radial from-0% from-gray-100/40 via-40% via-gray-100/30 to-black" />
+        <div className="absolute w-full h-full rounded-full top-1/2 left-1/2 -translate-1/2 bg-radial from-0% from-gray-100/40 via-40% via-gray-100/30 to-black brightness-50" />
         <img
           src={Pointer}
           className="absolute top-1/2 left-1/2 -translate-1/2 brightness-90"

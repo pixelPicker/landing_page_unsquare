@@ -4,7 +4,7 @@ import Logo from "@/assets/logo/logo.png";
 
 function Hero() {
   return (
-    <div className="w-screen h-screen relative font-Teachers">
+    <div className="w-screen h-screen relative font-Teachers overflow-hidden">
       <img
         className={`animate-bgscroll bg-[url("../src/assets/images/hero_bg.jpg")] w-full h-full bg-size-[200%] object-cover fixed top-0 left-0 -z-10 brightness-20 blur-[10px]`}
       />
@@ -78,9 +78,9 @@ function Main() {
           </button>
         </form>
       </div>
-      <div className="flex absolute bottom-1/10 -translate-y-1/2 items-center justify-between w-full px-14 pr-24">
-        <img src={DiamondMascot} />
-        <img src={MoonMascot} />
+      <div className="flex absolute top-1/2 -translate-y-1/2 items-center justify-between w-full px-14 pr-24">
+        <img src={DiamondMascot} className="mb-36" />
+        <img src={MoonMascot} className="mt-36" />
       </div>
     </main>
   );
