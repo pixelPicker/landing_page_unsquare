@@ -26,13 +26,13 @@ function Header() {
       <nav>
         <ul className="flex items-center gap-8 text-gray-100 font-Teachers text-lg">
           <li className="px-3 py-2 rounded-lg hover:bg-gray-200/30">
-            <a href="#">Services</a>
+            <a href="#services">Services</a>
           </li>
           <li className="px-3 py-2 rounded-lg hover:bg-gray-200/30">
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </li>
           <li className="px-3 py-2 rounded-lg hover:bg-gray-200/30">
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>

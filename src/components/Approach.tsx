@@ -43,7 +43,7 @@ const mottos = [
 
 function Approach() {
   return (
-    <div className="w-full px-14 bg-black pt-8 text-gray-100 font-Teachers">
+    <div id="approach" className="w-full px-14 bg-black pt-8 text-gray-100 font-Teachers">
       <div className="grid items-end grid-cols-2 font-Bricolage-Grotesque">
         <h2 className="text-6xl bg-clip-text text-transparent bg-gradient-to-r from-0% from-gray-500/60 to-100% to-gray-100/50">
           Want Results That <br /> Feel Human ?

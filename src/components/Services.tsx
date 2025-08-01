@@ -54,7 +54,7 @@ const ProvidedServices = [
 
 function Services() {
   return (
-    <div className="w-full px-14 pt-8 relative text-gray-100 font-Teachers">
+    <div id="services" className="w-full px-14 pt-8 relative text-gray-100 font-Teachers">
       <div className="w-full z-10 h-1/4 bg-gradient-to-b to-black/0 from-black absolute top-0 left-0" />
       <h1 className="text-6xl z-20 text-center font-Bricolage-Grotesque mt-20">
         What We Do
@@ -63,7 +63,7 @@ function Services() {
         {ProvidedServices.map((service) => (
           <li
             key={service.id}
-            className="flex p-10 justify-center items-center gap-2 flex-col bg-gray-100/5 backdrop-blur-[2px] rounded-lg"
+            className="flex p-10 justify-center items-center gap-2 flex-col backdrop-blur-[2px] rounded-lg"
           >
             <service.icon className="w-10 h-10 text-blue-500/50 mt-1" />
             <div className="flex gap-2 items-center">

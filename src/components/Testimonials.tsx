@@ -1,3 +1,4 @@
+import HappyPineapple from "@/assets/images/happy_pineapple.svg";
 import { motion } from "framer-motion";
 
 const testimonials = [
@@ -23,6 +24,13 @@ const testimonials = [
       "Roaders launched with a significant advantage thanks to Unsquare. They developed dedicated mobile applications for both our drivers and our customers...",
   },
   {
+    name: "Sayyam Khurmi",
+    role: "Founder",
+    company: "Against Odds",
+    message:
+      "Unsquare delivered an outstanding website for Against Odds, and a key part of that success was the expertise of Akshat. His technical insights and contributions were invaluable...",
+  },
+  {
     name: "Karan Melwani",
     role: "Founder and CEO",
     company: "Yahoom",
@@ -33,12 +41,15 @@ const testimonials = [
 
 function Testimonials() {
   return (
-    <div className="w-full pt-8 relative my-18 text-gray-100 font-Teachers">
-      <h1 className="text-6xl px-14 bg-clip-text text-transparent bg-gradient-to-r from-0% from-gray-500/60 to-100% to-gray-100/50 mb-18">
-        Voices of Success from
-        <br />
-        Our Satisfied Clients
-      </h1>
+    <div className="w-full pt-8 relative py-18 text-gray-100 font-Teachers">
+      <div className="flex gap-4 justify-between items-center px-14 mb-18">
+        <h1 className="text-6xl bg-clip-text text-transparent bg-gradient-to-r from-0% from-gray-500/60 to-100% to-gray-100/50">
+          Voices of Success from
+          <br />
+          Our Satisfied Clients
+        </h1>
+        <img src={HappyPineapple} className="brightness-75"/>
+      </div>
       <div className="overflow-hidden w-full bg-gray-100/5 backdrop-blur-[2px]">
         <motion.div
           className="flex w-max gap-3"
@@ -55,6 +66,7 @@ function Testimonials() {
           ))}
         </motion.div>
       </div>
+      <div className="w-full z-10 h-1/4 bg-gradient-to-b from-black/0 to-black absolute bottom-0 left-0" />
     </div>
   );
 }
@@ -68,11 +80,14 @@ type Testimonial = {
 
 function TestimonialCard({ name, role, company, message }: Testimonial) {
   return (
-    <div className="shadow-lg rounded-xl py-6 px-10 w-[300px] shrink-0 flex flex-col justify-between">
-      <p className="text-gray-700 italic mb-4">"{message}"</p>
+    <div
+      id="testimonials"
+      className="shadow-lg rounded-xl py-6 px-10 w-[300px] shrink-0 flex flex-col justify-between"
+    >
+      <p className="text-gray-500 italic mb-4">"{message}"</p>
       <div>
         <h4 className="font-medium">{name}</h4>
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-gray-400">
           {role}, {company}
         </p>
       </div>
