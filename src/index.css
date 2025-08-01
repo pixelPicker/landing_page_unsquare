@@ -3,7 +3,49 @@
 
 @import "tailwindcss";
 
+/* *HERO IMAGE ANIMATION */
+:root {
+  @keyframes bgscroll {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+  }
+}
 @theme {
   --font-Teachers: "Teachers", sans-serif;
   --font-Bricolage-Grotesque: "Bricolage Grotesque", sans-serif;
+  --animate-bgscroll: "bgscroll" 15s ease-in-out infinite;
+
+  @keyframes bgscroll {
+    0% {
+      background-position: 0% 0%;
+    }
+    10% {
+      background-position: 80% 30%;
+    }
+    20% {
+      background-position: 20% 100%;
+    }
+    30% {
+      background-position: 100% 60%;
+    }
+    45% {
+      background-position: 40% 10%;
+    }
+    60% {
+      background-position: 90% 90%;
+    }
+    75% {
+      background-position: 10% 50%;
+    }
+    90% {
+      background-position: 70% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
 }
