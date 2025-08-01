@@ -36,7 +36,7 @@ function Header() {
         {/* MOBILE DEVICES */}
         <ul
           className={clsx(
-            "fixed -top-90 opacity-0 left-0 z-50 w-[calc(100vw-64px)] mx-8 mt-10 p-2 bg-gray-100/10 shadow-lg backdrop-blur-[1px] rounded-lg backdrop-brightness-75 transition-all duration-300",
+            "fixed -top-90 opacity-0 left-0 z-50 w-[calc(100vw-64px)] mx-8 mt-10 p-2 bg-gray-100/10 shadow-lg backdrop-blur-[4px] rounded-lg backdrop-brightness-50 transition-all duration-300",
             isOpen && "opacity-100 top-10"
           )}
         >

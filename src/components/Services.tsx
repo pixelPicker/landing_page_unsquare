@@ -75,8 +75,8 @@ function Services() {
 
 function Service({ service }: { service: (typeof ProvidedServices)[number] }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "0px" });
-  
+  const isInView = useInView(ref, { margin: "0px" });
+
   return (
     <motion.div
       ref={ref}

@@ -8,37 +8,37 @@ const Mottos = [
     id: 1,
     title: "Clarity over complexity.",
     subtitle: "We build solutions you understand",
-    transform: "sm:-translate-1/2",
+    transform: "lg:-translate-1/2",
   },
   {
     id: 2,
     title: "Speed with soul.",
     subtitle: "We move fast but never without meaning.",
-    transform: "sm:-translate-1/2",
+    transform: "lg:-translate-1/2",
   },
   {
     id: 3,
     title: "Design that disappears.",
     subtitle: "Simple. Intuitive. No learning curve.",
-    transform: "sm:-translate-x-1/1 sm:-translate-y-1/2",
+    transform: "lg:-translate-x-1/1 lg:-translate-y-1/2",
   },
   {
     id: 4,
     title: "Crafted to outlast.",
     subtitle: "We don't just ship. We future-proof.",
-    transform: "sm:-translate-x-1/1 sm:-translate-y-1/2",
+    transform: "lg:-translate-x-1/1 lg:-translate-y-1/2",
   },
   {
     id: 5,
     title: "Partners, not vendors.",
     subtitle: "We stick around. We scale with you.",
-    transform: "sm:-translate-x-1/1 sm:-translate-y-1/2",
+    transform: "lg:-translate-x-1/1 lg:-translate-y-1/2",
   },
   {
     id: 6,
     title: "Human-first software.",
     subtitle: "Because users aren't just metrics.",
-    transform: "sm:-translate-1/2",
+    transform: "lg:-translate-1/2",
   },
 ];
 
@@ -88,12 +88,12 @@ function RotationSection() {
         ref={circleRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={() => setAngle(0)}
-        className="size-[600px] sm:border border-gray-100/50 rounded-full relative"
+        className="size-[600px] lg:border border-gray-100/50 rounded-full relative"
       >
-        <div className="sm:block hidden absolute w-full h-full rounded-full top-1/2 left-1/2 -translate-1/2 bg-radial from-0% from-gray-100/40 via-40% via-gray-100/30 to-black brightness-50" />
+        <div className="lg:block hidden absolute w-full h-full rounded-full top-1/2 left-1/2 -translate-1/2 bg-radial from-0% from-gray-100/40 via-40% via-gray-100/30 to-black brightness-50" />
         <img
           src={Pointer}
-          className="sm:block hidden absolute top-1/2 left-1/2 -translate-1/2 brightness-90"
+          className="lg:block hidden absolute top-1/2 left-1/2 -translate-1/2 brightness-90"
           style={{
             transform: `rotate(${angle}deg)`,
             transformOrigin: "50% 50%",
@@ -138,7 +138,7 @@ function MottoCard({
       }}
       key={motto.id}
       className={clsx(
-        "sm:absolute min-w-40 sm:min-w-0 sm:w-40 text-start left-0 top-0 border-[1.5px] border-gray-100/50 sm:border-0 p-2 rounded-lg sm:p-0 my-4 sm:my-0",
+        "lg:absolute min-w-40 lg:min-w-0 lg:w-40 text-start left-0 top-0 border-[1.5px] border-gray-100/50 lg:border-0 p-2 rounded-lg lg:p-0 my-4 lg:my-0",
         motto.transform
       )}
       style={{
