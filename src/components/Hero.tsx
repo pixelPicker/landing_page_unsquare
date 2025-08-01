@@ -1,6 +1,6 @@
 import MoonMascot from "@/assets/images/moon_mascot.svg";
 import DiamondMascot from "@/assets/images/diamond_mascot.svg";
-import Logo from "@/assets/logo/logo.png";
+import Header from "./Header";
 
 function Hero() {
   return (
@@ -15,27 +15,6 @@ function Hero() {
         </div>
       </div>
       <div className="w-full h-1/4 bg-gradient-to-b from-black/0 to-black absolute bottom-0 left-0" />
-    </div>
-  );
-}
-
-function Header() {
-  return (
-    <div className="flex absolute w-full justify-between items-center px-8 top-5 left-0">
-      <img src={Logo} alt="Unsquare Logo" className="w-36 aspect-auto" />
-      <nav>
-        <ul className="flex items-center gap-8 text-gray-100 font-Teachers text-lg">
-          <li className="px-3 py-2 rounded-lg hover:bg-gray-200/30">
-            <a href="#services">Services</a>
-          </li>
-          <li className="px-3 py-2 rounded-lg hover:bg-gray-200/30">
-            <a href="#about">About</a>
-          </li>
-          <li className="px-3 py-2 rounded-lg hover:bg-gray-200/30">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
     </div>
   );
 }
@@ -78,7 +57,7 @@ function Main() {
           </button>
         </form>
       </div>
-      <div className="flex absolute top-1/2 -translate-y-1/2 items-center justify-between w-full px-14 pr-24">
+      <div className="flex -z-10 absolute top-1/2 -translate-y-1/2 items-center justify-between w-full px-14 pr-24">
         <img src={DiamondMascot} className="mb-36" />
         <img src={MoonMascot} className="mt-36" />
       </div>

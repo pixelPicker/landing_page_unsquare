@@ -41,7 +41,7 @@ const testimonials = [
 
 function Testimonials() {
   return (
-    <div className="w-full pt-8 relative py-18 text-gray-100 font-Teachers">
+    <section className="w-full pt-8 relative py-18 text-gray-100 font-Teachers">
       <div className="flex gap-4 justify-between items-center px-14 mb-18">
         <h1 className="text-6xl bg-clip-text text-transparent bg-gradient-to-r from-0% from-gray-500/60 to-100% to-gray-100/50">
           Voices of Success from
@@ -67,7 +67,7 @@ function Testimonials() {
         </motion.div>
       </div>
       <div className="w-full z-10 h-1/4 bg-gradient-to-b from-black/0 to-black absolute bottom-0 left-0" />
-    </div>
+    </section>
   );
 }
 

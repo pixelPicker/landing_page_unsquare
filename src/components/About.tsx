@@ -40,9 +40,9 @@ function FirstAbout() {
 function SecondAbout() {
   const collaboratorImages = [
     Collaborator1,
-    Collaborator2,
     Collaborator3,
     Collaborator4,
+    Collaborator2,
   ];
   return (
     <div className="relative h-full pb-0 pt-4 p-[4px] rounded-t-xl bg-gradient-to-b from-0% from-gray-500/80 to-100% to-gray-100/0 ">
@@ -50,7 +50,7 @@ function SecondAbout() {
         <h2 className="text-4xl font-medium leading-tight tracking-tight font-Bricolage-Grotesque">
           We stand with our collaborators
         </h2>
-        <div className="grid grid-cols-2 place-items-center">
+        <div className="grid grid-cols-2 gap-y-2 place-items-center">
           {collaboratorImages.map((image) => (
             <img src={image} className="w-24  aspect-square object-contain" />
           ))}
