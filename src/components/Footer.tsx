@@ -3,24 +3,24 @@ function Footer() {
   return (
     <footer
       id="footer"
-      className="w-full pt-20 relative py-18 px-14 text-gray-100 font-Teachers"
+      className="w-full pt-20 relative py-18 px-8 sm:px-14 text-gray-100 font-Teachers"
     >
       <div id="contact" className="grid md:grid-cols-2 gap-12">
-        <div className="w-4/5">
+        <div className="sm:w-4/5">
           <h2 className="text-2xl font-bricolage mb-4">Let's work together</h2>
           <FooterForm />
         </div>
 
         <div className="flex flex-col justify-between">
           <div>
-            <img src={Logo} className="w-36 aspect-auto" />
-            <p className="text-white/60 mb-6 px-4 ">
+            <img src={Logo} className="w-36 aspect-auto -translate-x-4 sm:-translate-x-0" />
+            <p className="text-white/60 mb-6 sm:px-4 ">
               Building experiences that inspire.
               <br />
               Websites, apps, e-commerce, automation—tailored for your growth.
             </p>
           </div>
-          <div className="flex px-4 space-x-4 mt-6">
+          <div className="flex sm:px-4 space-x-4 mt-6">
             <a href="#" className="hover:text-white/80">
               Twitter
             </a>
@@ -52,7 +52,7 @@ function FooterForm() {
   return (
     <form
       onSubmit={(e) => handleEmailSubmit(e)}
-      className="grid grid-cols-3 shadow-lg"
+      className="grid sm:grid-cols-3 shadow-lg rounded-xl"
     >
       <input
         type="text"

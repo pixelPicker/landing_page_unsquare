@@ -42,7 +42,7 @@ function FAQ() {
   return (
     <section
       id="faq"
-      className="w-full px-14 py-8 relative text-gray-100 font-Teachers"
+      className="w-full px-8 sm:px-14 py-8 relative text-gray-100 font-Teachers"
     >
       <div className="w-full z-10 h-1/4 bg-gradient-to-b to-black/0 from-black absolute top-0 left-0" />
 
@@ -50,7 +50,7 @@ function FAQ() {
         <span className="text-gray-100/50">Your Burning</span>
         <br /> Questions Answered
       </h2>
-      <div className="w-2/3 mx-auto py-4 flex flex-col gap-4">
+      <div className="sm:w-2/3 mx-auto py-4 flex flex-col gap-4">
         {faqs.map((faq, index) => (
           <FaqItem key={index} {...faq} />
         ))}
@@ -73,7 +73,7 @@ export function FaqItem({ question, answer }: FaqItemProps) {
         onClick={() => setOpen(!open)}
         className="w-full flex justify-between items-center gap-4 text-left"
       >
-        <span className="text-white text-xl font-bricolage">{question}</span>
+        <span className="text-white text-base sm:text-xl font-bricolage">{question}</span>
         <ChevronDown
           className={clsx(
             "text-white transition-transform duration-300",

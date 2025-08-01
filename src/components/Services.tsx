@@ -56,10 +56,10 @@ function Services() {
   return (
     <div id="services" className="w-full px-14 pt-8 relative text-gray-100 font-Teachers">
       <div className="w-full z-10 h-1/4 bg-gradient-to-b to-black/0 from-black absolute top-0 left-0" />
-      <h1 className="text-6xl z-20 text-center font-Bricolage-Grotesque mt-20">
+      <h1 className="text-3xl sm:text-5xl lg:text-6xl z-20 text-center font-Bricolage-Grotesque mt-20">
         What We Do
       </h1>
-      <ul className="grid grid-cols-2 gap-14 p-18">
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-14 px-8 py-4 md:p-18">
         {ProvidedServices.map((service) => (
           <li
             key={service.id}

@@ -4,7 +4,7 @@ import Header from "./Header";
 
 function Hero() {
   return (
-    <div className="w-screen h-screen relative font-Teachers overflow-hidden">
+    <div id="home" className="max-w-screen h-screen relative font-Teachers overflow-hidden">
       <img
         className={`animate-bgscroll bg-[url("../src/assets/images/hero_bg.jpg")] w-full h-full bg-size-[200%] object-cover fixed top-0 left-0 -z-10 brightness-20 blur-[10px]`}
       />
@@ -27,14 +27,14 @@ function Main() {
 
   return (
     <main className="px-8 flex flex-col justify-center text-center text-gray-300 h-full gap-5">
-      <h1 className="text-6xl font-Bricolage-Grotesque text-white">
+      <h1 className="text-3xl sm:text-5xl lg:text-6xl font-Bricolage-Grotesque text-white">
         Build Digital Experiences <br /> That Drive Results
       </h1>
-      <p className="text-xl font-Teachers max-w-[60ch] mx-auto">
+      <p className="sm:text-xl font-Teachers max-w-[60ch] mx-auto">
         We craft scalable, high-performance websites and apps that elevate your
         brand, engage users, and accelerate growth.
       </p>
-      <div className="w-1/3 mx-auto">
+      <div className="sm:w-1/3 mx-auto">
         <form
           action="POST"
           onSubmit={(e) => handleEmailSubmit(e)}
@@ -51,15 +51,15 @@ function Main() {
           />
           <button
             type="submit"
-            className="row-start-1 m-2 row-end-2 py-2 col-start-3 col-end-4 bg-gradient-to-r from-0% from-gray-500/60 to-100% to-gray-100/50 rounded-lg border-[1.5px] border-gray-100/50 cursor-pointer hover:from-gray-400/60 hover:to-gray-100/70 transition-all"
+            className="row-start-1 m-2 row-end-2 py-2 col-start-3 col-end-4 bg-gradient-to-r from-0% from-gray-500/60 to-100% to-gray-100/50 rounded-lg border-[1.5px] px-1 sm:px-0 border-gray-100/50 cursor-pointer hover:from-gray-400/60 hover:to-gray-100/70 transition-all"
           >
             Schedule Now
           </button>
         </form>
       </div>
-      <div className="flex -z-10 absolute top-1/2 -translate-y-1/2 items-center justify-between w-full px-14 pr-24">
-        <img src={DiamondMascot} className="mb-36" />
-        <img src={MoonMascot} className="mt-36" />
+      <div className="-z-10 absolute top-1/2 hidden sm:flex -translate-y-1/2 items-center justify-between w-full px-8 sm:px-14 sm:pr-24">
+        <img src={DiamondMascot} className="sm:mb-36" />
+        <img src={MoonMascot} className="sm:mt-36" />
       </div>
     </main>
   );

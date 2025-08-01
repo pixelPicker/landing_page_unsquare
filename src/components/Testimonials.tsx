@@ -42,13 +42,13 @@ const testimonials = [
 function Testimonials() {
   return (
     <section className="w-full pt-8 relative py-18 text-gray-100 font-Teachers">
-      <div className="flex gap-4 justify-between items-center px-14 mb-18">
-        <h1 className="text-6xl bg-clip-text text-transparent bg-gradient-to-r from-0% from-gray-500/60 to-100% to-gray-100/50">
+      <div className="flex gap-4 justify-between items-center px-8 sm:px-14 mb-18">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-0% from-gray-500/60 to-100% to-gray-100/50">
           Voices of Success from
           <br />
           Our Satisfied Clients
         </h1>
-        <img src={HappyPineapple} className="brightness-75"/>
+        <img src={HappyPineapple} className="brightness-75 w-36 md:w-56"/>
       </div>
       <div className="overflow-hidden w-full bg-gray-100/5 backdrop-blur-[2px]">
         <motion.div
@@ -87,7 +87,7 @@ function TestimonialCard({ name, role, company, message }: Testimonial) {
       <p className="text-gray-500 italic mb-4">"{message}"</p>
       <div>
         <h4 className="font-medium">{name}</h4>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm sm:text-lg text-gray-400">
           {role}, {company}
         </p>
       </div>
