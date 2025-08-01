@@ -1,5 +1,7 @@
 import Collaborator1 from "@/assets/logo/collaborator1.webp";
 import Collaborator3 from "@/assets/logo/collaborator3.svg";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 function About() {
   return (
@@ -17,8 +19,17 @@ function About() {
 }
 
 function FirstAbout() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "-20%" });
+
   return (
-    <div className="relative pt-0 pb-4 px-[2px] rounded-b-xl bg-gradient-to-t from-0% from-gray-500/80 to-100% to-gray-100/0 h-full">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="relative pt-0 pb-4 px-[2px] rounded-b-xl bg-gradient-to-t from-0% from-gray-500/80 to-100% to-gray-100/0 h-full"
+    >
       <div className="space-y-6 h-full bg-black rounded-b-xl p-14">
         <h2 className="text-4xl font-medium leading-tight tracking-tight font-Bricolage-Grotesque">
           This isn't just development.
@@ -31,17 +42,23 @@ function FirstAbout() {
           crafted with precision and purpose.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 function SecondAbout() {
-  const collaboratorImages = [
-    Collaborator1,
-    Collaborator3,
-  ];
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "-20%" });
+
+  const collaboratorImages = [Collaborator1, Collaborator3];
   return (
-    <div className="relative h-full pb-0 pt-4 p-[4px] rounded-t-xl bg-gradient-to-b from-0% from-gray-500/80 to-100% to-gray-100/0 ">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="relative h-full pb-0 pt-4 p-[4px] rounded-t-xl bg-gradient-to-b from-0% from-gray-500/80 to-100% to-gray-100/0 "
+    >
       <div className="space-y-6 h-full bg-black rounded-t-xl p-14">
         <h2 className="text-4xl font-medium leading-tight tracking-tight font-Bricolage-Grotesque">
           We stand with our collaborators
@@ -52,7 +69,7 @@ function SecondAbout() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

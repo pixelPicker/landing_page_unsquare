@@ -1,7 +1,7 @@
 import HappyPineapple from "@/assets/images/happy_pineapple.svg";
 import { motion } from "framer-motion";
 
-const testimonials = [
+const TestimonialData = [
   {
     name: "CA Aditya Goenka",
     role: "Cofounder",
@@ -48,7 +48,17 @@ function Testimonials() {
           <br />
           Our Satisfied Clients
         </h1>
-        <img src={HappyPineapple} className="brightness-75 w-36 md:w-56"/>
+        <motion.img
+          whileHover={{
+            rotate: [0, -5, 5, -5, 5, 0],
+          }}
+          transition={{
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          src={HappyPineapple}
+          className="brightness-75 w-36 md:w-56"
+        />
       </div>
       <div className="overflow-hidden w-full bg-gray-100/5 backdrop-blur-[2px]">
         <motion.div
@@ -61,7 +71,7 @@ function Testimonials() {
             ease: "linear",
           }}
         >
-          {[...testimonials, ...testimonials].map((t, i) => (
+          {[...TestimonialData, ...TestimonialData].map((t, i) => (
             <TestimonialCard key={i} {...t} />
           ))}
         </motion.div>
@@ -71,14 +81,12 @@ function Testimonials() {
   );
 }
 
-type Testimonial = {
-  name: string;
-  role: string;
-  company: string;
-  message: string;
-};
-
-function TestimonialCard({ name, role, company, message }: Testimonial) {
+function TestimonialCard({
+  name,
+  role,
+  company,
+  message,
+}: (typeof TestimonialData)[number]) {
   return (
     <div
       id="testimonials"

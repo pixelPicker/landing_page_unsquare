@@ -1,9 +1,9 @@
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Pointer from "@/assets/images/pointer.svg";
 import React, { useRef, useState } from "react";
 import clsx from "clsx";
 
-const mottos = [
+const Mottos = [
   {
     id: 1,
     title: "Clarity over complexity.",
@@ -100,33 +100,57 @@ function RotationSection() {
             transition: "all",
           }}
         />
-        {mottos.map((motto, index) => {
-          const angle = (360 / mottos.length) * index;
+        {Mottos.map((motto, index) => {
+          const angle = (360 / Mottos.length) * index;
           const radius = 270;
           const x = radius * Math.cos((angle * Math.PI) / 180);
           const y = radius * Math.sin((angle * Math.PI) / 180);
 
-          return (
-            <div
-              key={motto.id}
-              className={clsx(
-                "sm:absolute min-w-40 sm:min-w-0 sm:w-40 text-start left-0 top-0 border-[1.5px] border-gray-100/50 sm:border-0 p-2 rounded-lg sm:p-0 my-4 sm:my-0",
-                motto.transform
-              )}
-              style={{
-                left: `calc(50% + ${x}px)`,
-                top: `calc(50% + ${y}px)`,
-              }}
-            >
-              <h4 className="text-lg sm:text-2xl text-nowrap sm:font-medium">
-                {motto.title}
-              </h4>
-              <p className="text-nowrap text-sm sm:text-lg">{motto.subtitle}</p>
-            </div>
-          );
+          return <MottoCard motto={motto} x={x} y={y} />;
         })}
       </div>
     </div>
+  );
+}
+
+function MottoCard({
+  motto,
+  x,
+  y,
+}: {
+  motto: (typeof Mottos)[number];
+  x: number;
+  y: number;
+}) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "-20%" });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={isInView ? { opacity: 1, scale: 1 } : {}}
+      transition={{
+        duration: 0.6,
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      }}
+      key={motto.id}
+      className={clsx(
+        "sm:absolute min-w-40 sm:min-w-0 sm:w-40 text-start left-0 top-0 border-[1.5px] border-gray-100/50 sm:border-0 p-2 rounded-lg sm:p-0 my-4 sm:my-0",
+        motto.transform
+      )}
+      style={{
+        left: `calc(50% + ${x}px)`,
+        top: `calc(50% + ${y}px)`,
+      }}
+    >
+      <h4 className="text-lg sm:text-2xl text-nowrap sm:font-medium">
+        {motto.title}
+      </h4>
+      <p className="text-nowrap text-sm sm:text-lg">{motto.subtitle}</p>
+    </motion.div>
   );
 }
 
